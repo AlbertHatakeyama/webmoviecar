@@ -1,8 +1,8 @@
 <?php
-    include("./includes/config.php");
+    
 
     // VARIAVEIS DO SEO
-    $title_pagina           = "NaturalCalm";
+    $title_pagina           = "Web Movie Car";
 
     // DEPOIMENTOS
      $depoimentos = array(
@@ -21,36 +21,7 @@
         )
     );
     
-    $doencas = array(
-        array(
-            "doenca" => "Insônia"
-        ),
-        array(
-            "doenca" => "Ansiedade"
-        ),
-        array(
-            "doenca" => "Dores crônicas"
-        ),
-        array(
-            "doenca" => "Epilepsia"
-        ),
-        array(
-            "doenca" => "Alzheimer"
-        ),
-        array(
-            "doenca" => "Autismo"
-        ),
-        array(
-            "doenca" => "Câncer"
-        ),
-        array(
-            "doenca" => "Glaucoma"
-        ),
-        array(
-            "doenca" => "Parkinson"
-        ),
     
-    );
 
     // PERGUNTAS FREQUENTES
     $perguntas_frequrntes = array(
@@ -82,7 +53,6 @@
     );
 
     include("./includes/head.php");
-    include("./includes/tela_carregamento.php");
 ?>
     <section class="carroussel-banner">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
