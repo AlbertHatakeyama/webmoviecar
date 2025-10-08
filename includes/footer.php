@@ -139,48 +139,8 @@
             <i class="fa-brands fa-whatsapp fa-shake"></i>
         </a>
     <?php } ?>
-<!-- Modal para exibir a política de privacidade -->
-<div id="modalPolitica" >
-    <div>
-        <?php include("./includes/politica_de_privacidade.php"); ?>
-    </div>
-</div>
     <!--====== CARREGAMENTO DE SCRIPTS =======-->
-    <!-- script jquery -->
-
-    <script src="<?=$url?>assets/bootstrap/jquery-3.2.1.slim.min.js"></script>
-
-
-
-    <!-- script popper -->
-
-    <script src="<?=$url?>assets/bootstrap/popper.min.js"></script>
-
-
-
-    <!-- script bootstrap -->
-
-    <script src="<?=$url?>assets/bootstrap/bootstrap.min.js"></script>
-
-
-
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-
-    <script src="<?=$url?>assets/bootstrap/holder.min.js"></script>
-
-
-
-    <!-- script lottiefiles (ANIMACOES) -->
-
-    <script src="<?=$url?>assets/lottiefiles/lottie-player.js"></script>
-
-
-
-    <!-- script Glider -->
-
-    <script src="<?=$url?>assets/glider/glider.min.js"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- script principal -->
 

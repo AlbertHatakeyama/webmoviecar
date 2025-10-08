@@ -1,44 +1,16 @@
-/**
- * @theme LP1
- * @version 1.0
- * @author BMA Soluções Digitais
- * @site https://bmasolucoesdigitais.com.br/
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --color_1: #458bb7;
-    --color_2_forms: rgb(255, 255, 255);
-    --color_2: #FF7B00;
-    --color_3: #1C8A00;
-    --color_4: #FFC107;
-    --color_5:#4c802f;
-    --color_6:#9e7d24;
-    --color_7:#555555;
-    --color_8:#578500;
-
-    --color_1_trans: #0065CA91;
-    --color_2_trans: #FF7B0091;
-    --color_3_trans: #1C8A0091;
-    --color_4_trans: #578500;
-
-    --color_lestras_1: #000000;
-    --color_lestras_2: #ffffff;
-    --color_placeholder: #777777;
+    
+    --color_1: #000000;
+    --color_2: #ffffff;
+    --color_3:#ff0000;
+    
    
     --background-banner: rgb(227, 227, 239);
     --background_1: #FFFFFF;
-    --background_1_trans: #ececec;
-    --background_2: #F7F7F7;
-    --background_3: rgb(209 229 170);
-    --background_4:rgba(200, 198, 114, 0.996);
-    --background_5: #46d289;
-    --background_6: #c9c772;
-    --background_7: rgb(87, 133, 0);
-    --background_8:#222;
-    --background_9: #eee;
-    --background_trans:rgba(0, 0, 0, 0.267);
+    --background_2: #000000;
+    --background_3: #ff0202;
+
 
 
     --rounded: 30px;
@@ -76,7 +48,7 @@ body {
     overflow: overlay;
     overflow-x: hidden;
     scrollbar-width: thin;
-    color: var(--color_lestras_1) !important;
+    color: var(--color_1) !important;
 }
 
 body.no_scroll {
@@ -110,80 +82,8 @@ body::-webkit-scrollbar-thumb {
     border-radius:.25rem
 }
 
-body::-webkit-scrollbar {
-    width:10px;
-    height:10px
-}
 
 
-a {
-    cursor: pointer;
-}
-
-::placeholder {
-    color: var(--color_placeholder) !important;
-}
-
-
-#tela_carregamento {
-    background: var(--background_1);
-    position: fixed;
-    opacity: 1;
-    top: 0; left: 0; bottom: 0; right: 0;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity .3s linear;
-}
-
-#tela_carregamento.sumir {    
-    opacity: 0;
-}
-
-#tela_carregamento .spinner {
-    --clr: var(--color_2_forms);
-    --gap: 6px;
-
-    width: 6.25rem;
-    height: 6.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap);
-}
-    
-#tela_carregamento .spinner span {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 100%;
-    background-color: var(--clr);
-    opacity: 0;
-}
-    
-#tela_carregamento .spinner span:nth-child(1) {
-    animation: fade 1s ease-in-out infinite;
-}
-    
-#tela_carregamento .spinner span:nth-child(2) {
-    animation: fade 1s ease-in-out 0.33s infinite;
-}
-    
-#tela_carregamento .spinner span:nth-child(3) {
-    animation: fade 1s ease-in-out 0.66s infinite;
-}
-    
-@keyframes fade {
-    0%, 100% {
-        opacity: 1;
-    }
-    
-    60% {
-        opacity: 0;
-    }
-}
 
 /* NAVBAR */
 .scrolled-up {
@@ -198,7 +98,7 @@ a {
 }
 
 .navbar {
-    background-color: var(--background_1);
+    background-color: var(--background_2);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -208,7 +108,7 @@ a {
 }
 
 .navbar-nav .nav-link {
-    color: var(--color_8);
+    color: var(--color_3);
     font-weight: bold;
     font-family: var(--font_clinica1);
     margin-right: 1.5rem;
@@ -223,7 +123,11 @@ a {
 }
 
 .nav-item.dropdown:hover .nav-link {
-    color: var(--color_8);
+    color: var(--color_3);
+}
+
+.menu_logo{
+    max-width: 250px;
 }
 
 
@@ -231,7 +135,7 @@ a {
     AJUSTES CLASSES B4
 ///////////////////////*/
 .bg-primary {
-    background: var(--color_2) !important;
+    background: var(--background_3) !important;
 }
 
 .bg-secondary {
@@ -258,12 +162,12 @@ a {
 }
 
 .btn-primary {
-    background: var(--background_5) !important;
-    color: var(--color_lestras_2) !important;
+    background: var(--background_3) !important;
+    color: var(--color_2) !important;
 }
 
 .btn-secondary {
-    background: var(--color_lestras_2) !important;
+    background: var(--color_2) !important;
     color: var(--btn_color) !important;
 }
 
@@ -300,90 +204,21 @@ a {
 .btn:hover,
 .btn:focus {
     background: var(--color_4_trans) !important;
-    color: var(--color_lestras_2) !important;
+    color: var(--color_2) !important;
     border: 1px solid var(--btn_border) !important;
     box-shadow: var(--btn_shadow_hover) !important;
     outline: transparent !important;
 }
 
 .aspas {
-    color: var(--color_lestras_2) !important;
+    color: var(--color_2) !important;
 }
 
 .estrelas{
     color: var(--color_4);
 }
 
-.text-secondary,
-a.text-primary:focus, 
-a.text-primary:hover,
-a.text-white:focus, 
-a.text-white:hover {
-    color: var(--color_3) !important;
-}
 
-a.text-secondary:focus, 
-a.text-secondary:hover {
-    color: var(--color_1) !important;
-}
-
-.btn:not(:disabled):not(.disabled).active:focus, 
-.btn:not(:disabled):not(.disabled):active:focus, 
-.show>.btn.dropdown-toggle:focus, 
-.btn:not(:disabled):not(.disabled):active, 
-.show>.btn.dropdown-toggle,
-.btn.focus, .btn:focus,
-.form-control:focus,
-.custom-control-input:focus~.custom-control-label::before {
-    color: var(--color_lestras_1) !important;
-    border-color: var(--color_1) !important;
-    box-shadow: var(--btn_shadow_hover) !important;
-    background-color: var();
-}
-
-.form-control {
-    color: var(--color_lestras_1) !important;
-    border-radius: var(--rounded2);
-    border: 1px solid var(--btn_border);
-}
-
-.form-control:focus::placeholder {
-    color: var(--color_1) !important;
-}
-
-.form-control:focus + i {
-    color: var(--color_1) !important;
-}
-
-.custom-control-label::before,
-.custom-control-label::after {
-    width: 1.1rem !important;
-    height: 1.1rem !important;
-    border-radius: 20% !important;
-    border: 1px solid var(--btn_border);
-}
-
-.custom-control-label::before {
-    background: var(--background_2);
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before,
-.custom-radio .custom-control-input:checked~.custom-control-label::before,
-.custom-control-input:active~.custom-control-label::before {
-    background: var(--color_1);
-}
-
-.border-top {
-    border-top: 1px solid var(--boders)!important;
-}
-
-.rounded {
-    border-radius: var(--rounded2) !important;
-}
-
-.shadow {
-    box-shadow: var(--shadow) !important;
-}
 
 /*////////////////////////
     CSS UTILITÁRIOS
@@ -423,137 +258,7 @@ a.text-secondary:hover {
 /*////////////////////////
     CSS ADICIONAL
 ///////////////////////*/
-#inicio,
-#section_cadastro,
-#section_agradecimento {
-    height: auto;
-    /*min-height: 45rem;*/
-}
 
-#inicio,
-#idealizadoras {
-    position: relative;
-    /*height: 100%;*/
-}
-
-
-#inicio::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-
-
-#inicio .row {
-    position: relative;
-    z-index: 2;
-}
-
-
-.icon_card {
-    height: 6rem;
-}
-
-.icon_card .fundo,
-.icon_card .icon {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    color: var(--color_1);
-    transform: translate3d(-50%, -50%, 0);
-    transition: all .2s ease-in-out;
-}
-
-.icon_card .fundo {
-    width: 6rem;
-    height: 6rem;
-    opacity: .2;
-}
-
-.icon_card .icon {
-    width: 4rem;
-    height: 4rem;
-}
-
-li:hover .icon_card .fundo {
-    opacity: 1;
-}
-
-li:hover .icon_card .icon {
-    color: var(--color_lestras_2);
-}
-
-#img_s1{
-    min-height: 20rem;
-}
-
-#img_s1 {
-    background-image: url("./imagens/fundos/canabis.jpg");
-}
-
-#img_s2 {
-    background-image: url("./imagens/fundos/cannabes-tratamento.jpeg");
-    background-attachment: fixed;
-}
-
-.fundo-cards-consulta {
-    background-image: url("./imagens/fundos/cannabis-medicinal.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 2rem 0;
-}
-
-
-#inicio::before,
-#img_s2::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .8;
-}
-
-/*#inicio::before {
-    background: var(--background-banner);
-}*/
-
-#img_s2::before {
-    background: linear-gradient(90deg, var(--color_4_trans) 40%, var(--background_6) 100%);
-}
-
-#form_cadastro input {
-    padding-left: 2.7rem !important;
-}
-
-#form_cadastro .form-row i {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-#form_cadastro.focus {
-    display: block;
-    position: relative;
-    z-index: 99999;
-}
-
-#form_cadastro.focus input {
-    -webkit-animation: focus_form 1s linear infinite;
-    animation: focus_form 1s linear infinite;
-}
 
 @keyframes focus_form {
     0%   {
@@ -678,7 +383,7 @@ li:hover .icon_card .icon {
 }
 
 .line_dashed{
-    border-bottom: 4px dashed var(--color_lestras_1);
+    border-bottom: 4px dashed var(--color_1);
     border-top: none;
 }
 
@@ -691,20 +396,20 @@ li:hover .icon_card .icon {
 /*introdução*/
 
 .wow{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica2);
     font-weight: 900;
 }
 
 .titulo h2{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica2);
     font-size: 2.5rem;
     font-weight: 500;
 }
 
 .texto-introducao p{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica1);
     font-size: 15px;
 }
@@ -822,13 +527,13 @@ li:hover .icon_card .icon {
     transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
 }
 .services .item .wrap .con h2 {
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     font-family: var(--font_clinica2);
     font-size: 25px;
     font-weight: bold;
 }
 .services .item .wrap .con p {
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     font-family: var(--font_clinica2);
     font-size: 1rem;
     /*letter-spacing: 3px;*/
@@ -841,21 +546,21 @@ li:hover .icon_card .icon {
     background-color: var(--background_5);
 }
 .services .item:hover .wrap .icon-1 { 
-    color: var(---color_lestras_2);
+    color: var(---color_2);
     transform: translateY(-25px);
 }
 .services .item:hover .wrap .con {
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     transform: translateY(-25px);
 }
 .services .item:hover .wrap .con h2 {
-    color: var(--color_lestras_2);
+    color: var(--color_2);
 }
 .services .item:hover .wrap .con p {
-    color: var(--color_lestras_2);
+    color: var(--color_2);
 }
 .services .item:hover .wrap .con .icon-2{
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     opacity: 1;
 }
 .services .item .wrap .numb {
@@ -866,7 +571,7 @@ li:hover .icon_card .icon {
     bottom: 15px;
     right: 5px;
     text-align: end;
-    color: var(--color_lestras_2);
+    color: var(--color_2);
 }
 
 .services .item.active {
@@ -876,7 +581,7 @@ li:hover .icon_card .icon {
 .services .item.active .wrap .con h3,
 .services .item.active .wrap .con p,
 .services .item.active .wrap .con i  {
-    color: var(--color_lestras_2);
+    color: var(--color_2);
 }
 
 .services span{
@@ -887,7 +592,7 @@ li:hover .icon_card .icon {
 /*Pergutas e Respostas*/
 
 .section-perguntas h2{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
 }
 
 .section-perguntas li{
@@ -896,7 +601,7 @@ li:hover .icon_card .icon {
 }
 
 .section-perguntas a{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica1);
     font-weight: 500;
     
@@ -908,11 +613,11 @@ li:hover .icon_card .icon {
 }
 
 .seta-perguntas{
-    color: var(--color_lestras_1) !important;
+    color: var(--color_1) !important;
 }
 
 .duvidas{
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     font-family: var(--font_clinica3);
 }
 
@@ -937,7 +642,7 @@ li:hover .icon_card .icon {
 }
 
 .duvidas{
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     font-family: var(--font_clinica3);
 }
 
@@ -955,7 +660,7 @@ li:hover .icon_card .icon {
 }
 
 .sobre_nos_images h1{
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     font-family: var(--font_clinica2);
     font-size: 5vw;
     font-weight: 900;
@@ -984,14 +689,14 @@ li:hover .icon_card .icon {
 }
 
 .sobre_nos_textos h2{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica3);
     font-size: 2.5vw;
     font-weight: 500;
 }
 
 .sobre_nos_textos p{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica1);
     font-weight: 300;
 }
@@ -1006,20 +711,20 @@ li:hover .icon_card .icon {
 }
 
 .doutor_sessao h1{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica3);
     font-weight: 700;
     font-size: 4rem;
 }
 .doutor_sessao p{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica1);
     font-weight: 500;
     font-size: 1.5rem;
 }
 
 .doutor_sessao b{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica2);
 }
 
@@ -1049,21 +754,21 @@ li:hover .icon_card .icon {
     height: 500px;
 }
 .produtos_textos h1{
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     font-family: var(--font_clinica2);
     font-size: 5vw;
     font-weight: 900;
 }
 
 .page-section h1{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica1);
     font-size: 4rem;
     font-weight: 700;
 }
 
 .page-section p{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica2);
     font-size: 20px;
     font-weight: 500;
@@ -1080,7 +785,7 @@ li:hover .icon_card .icon {
 
 /*Serviços*/
 .servicos_images_banner h1{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica1);
     font-size: 4rem;
     font-weight: 700;
@@ -1142,18 +847,18 @@ li:hover .icon_card .icon {
 .card__description-1 {
     margin: 10px 0 0;
     font-size: 14px;
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     line-height: 1.4;
 }
 /*Contatos*/
 .section-mapa h1{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica2);
     font-size: 3rem;
     font-weight: 900;
 }
 .section-mapa h2{
-    color: var(--color_lestras_1);
+    color: var(--color_1);
     font-family: var(--font_clinica2);
     font-size: 2.5rem;
     font-weight: 500;
@@ -1168,21 +873,21 @@ position: relative;
 }
 
 .fundo-contatos h5 {
-color: var(--color_lestras_1);
+color: var(--color_1);
 font-family: var(--font_clinica3);
 font-size: 25px;
 font-weight: 500;
 }
 
 .fundo-contatos p{
-color: var(--color_lestras_1);
+color: var(--color_1);
 font-family: var(--font_clinica2);
 font-size: 20px;
 font-weight: 500;
 }
 
 .fundo-contatos a{
-    color: var(--color_lestras_1);    
+    color: var(--color_1);    
     font-size: 30px;
     font-weight: 500;
 }
@@ -1222,7 +927,7 @@ form input {
 }
 form input[type="button"] {
     background-color: var(--form-bg)!important;
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     font-size: 17px;
 }
 form select{
@@ -1251,13 +956,13 @@ font-weight: 500;
 }
 /*Footer*/
 .bg-dark h1{
-    color: var(--color_lestras_1) !important;
+    color: var(--color_1) !important;
     font-family: var(--font_clinica1);
     font-size: 2.5rem;
 }
 
 .contatenos a{
-    color: var(--color_lestras_1) !important;
+    color: var(--color_1) !important;
     font-family: var(--font_clinica1);
     text-decoration: none;
 }
@@ -1274,7 +979,7 @@ font-weight: 500;
 }
 
 .social-media a{
-    color: var(--color_lestras_1) !important;
+    color: var(--color_1) !important;
 }
 
 #whatsApp {
@@ -1288,7 +993,7 @@ font-weight: 500;
     border-radius: 50%;
     border: 1px solid #0000001e;
     font-size: 2.5rem;
-    color: var(--color_lestras_2);
+    color: var(--color_2);
     text-decoration: none;
     display: flex;
     justify-content: center;

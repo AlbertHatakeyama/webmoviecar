@@ -2,17 +2,17 @@
 
 //LOCAL
 if ($_SERVER['REMOTE_ADDR'] == "127.0.0.1" or $_SERVER['REMOTE_ADDR'] == "::1") {
-    $url = "http://localhost/naturalcalm/";
+    $url = "http://localhost/webmoviecar/";
 } 
 
 //HOMOLOGAÇÃO 
 else if (substr_count($_SERVER['REQUEST_URI'], "/") >= 1) { 
-    $url = "https://www.naturalcalm.com.br/prova/";
+    $url = "https://www.webmoviecar.com.br/prova/";
 } 
 
 // PRODUÇÃO
 else {
-    $url = "https://www.naturalcalm.com.br/";
+    $url = "https://www.webmoviecar.com.br/";
 }
 
 ?>
@@ -26,7 +26,7 @@ else {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!--======= SEO ==========-->
-        <title>Comece seu tratamento com Canabidiol ainda hoje</title>
+        <title>Web Movie Cars</title>
         <meta name="description" content="">
         <meta name="robots" content="all">
         <meta name="author" content="BMA Soluções Digitais">
@@ -59,21 +59,19 @@ else {
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <!--======= FOLHAS DE ESTILOS ==========-->
-        <link rel="stylesheet" href="<?=$url?>assets/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="<?=$url?>assets/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="<?=$url?>assets/glider/glider.min.css">
-        <link rel="stylesheet" href="<?=$url?>assets/style.css">
+        <link rel="stylesheet" href="<?=$url?>assets/css/style.css">
     </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <section>
         <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a href="/#" class="navbar-brand" onclick="toggleSocialIcons(event)">
-                    <img src="<?=$url?>assets/imagens/logos/logo_pqn.png" alt="Logo" class="img-fluid">
+                    <img src="<?=$url?>assets/imagens/logos/logo_menor1.jpg" alt="Logo" class="img-fluid menu_logo">
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,18 +87,15 @@ else {
                             <a class="nav-link" href="<?=$url?>sobre_nos">Sobre Nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?=$url?>produtos">Produtos</a>
+                            <a class="nav-link" href="<?=$url?>planos">Planos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?=$url?>servicos">Serviço</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?=$url?>blog">Blog</a>
+                            <a class="nav-link" href="<?=$url?>carros">Carros</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item contato">
-                            <a class="nav-link btn btn-primary" href="<?=$url?>contatos">Contato</a>
+                            <a class="nav-link btn btn-primary" href="<?=$url?>login">Entrar</a>
                         </li>
                     </ul>
                 </div>

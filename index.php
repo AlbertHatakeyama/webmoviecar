@@ -1,88 +1,5 @@
 <?php
-    include("./includes/config.php");
-
-    // VARIAVEIS DO SEO
-    $title_pagina           = "NaturalCalm";
-
-    // DEPOIMENTOS
-     $depoimentos = array(
-        array(
-            "depoimento" => "Fiz parte do curso de Formação Para Cidadania no período de vinte e dias, e aprendi conceitos muito importantes a respeito do mercado de trabalho, tanto com atividades práticas quanto teóricas.
-                                A equipe de funcionários é muito competente e o serviço fornecido também foi ótimo."
-        ),
-        array(
-            "depoimento" => "Minha experiência na formação para cidadania foi ótima, tenho a agradecer pelo conhecimento adquirido que acredito que vai me auxiliar muito no mercado de trabalho e em outras áreas também."
-        ),
-        array(
-            "depoimento" => "Gostei muito da experiência do Camp Pinheiros, me proporcionou a aprender muitas coisas novas, principalmente minha comunicação que era informal, mais com a Mayara e a Érica consegui desenvolver melhor minha comunicação, estou grato ao Camp Pinheiros e as orientadoras, super recomendo a todos"
-        ),
-        array(
-            "depoimento" => "Eu gostei muito das experiências que tive aqui no camp. Aprendi muita coisa e já estou colocando em prática o que eu aprendi"
-        )
-    );
-    
-    $doencas = array(
-        array(
-            "doenca" => "Insônia"
-        ),
-        array(
-            "doenca" => "Ansiedade"
-        ),
-        array(
-            "doenca" => "Dores crônicas"
-        ),
-        array(
-            "doenca" => "Epilepsia"
-        ),
-        array(
-            "doenca" => "Alzheimer"
-        ),
-        array(
-            "doenca" => "Autismo"
-        ),
-        array(
-            "doenca" => "Câncer"
-        ),
-        array(
-            "doenca" => "Glaucoma"
-        ),
-        array(
-            "doenca" => "Parkinson"
-        ),
-    
-    );
-
-    // PERGUNTAS FREQUENTES
-    $perguntas_frequrntes = array(
-        array(
-            "pergunta" => "Quem pode consumir canabidiol?",
-            "resposta" => "Lorem ipsum risus nam duis imperdiet consequat viverra, aliquam nostra ut lacus aliquet consectetur, porta vitae fringilla euismod tempus lacus."
-        ),
-        array(
-            "pergunta" => "Como faço para poder tratar com a cannabis medicinal?",
-            "resposta" => "Lorem ipsum risus nam duis imperdiet consequat viverra, aliquam nostra ut lacus aliquet consectetur, porta vitae fringilla euismod tempus lacus."
-        ),
-        array(
-            "pergunta" => "O que é o CannaID?",
-            "resposta" => "Lorem ipsum risus nam duis imperdiet consequat viverra, aliquam nostra ut lacus aliquet consectetur, porta vitae fringilla euismod tempus lacus."
-        ),
-        array(
-            "pergunta" => "Como funciona o tratamento?",
-            "resposta" => "Lorem ipsum risus nam duis imperdiet consequat viverra, aliquam nostra ut lacus aliquet consectetur, porta vitae fringilla euismod tempus lacus."
-        ),
-        array(
-            "pergunta" => "Uso prolongado faz mal?",
-            "resposta" => "Lorem ipsum risus nam duis imperdiet consequat viverra, aliquam nostra ut lacus aliquet consectetur, porta vitae fringilla euismod tempus lacus."
-        ),
-        array(
-            "pergunta" => "Vicia?",
-            "resposta" => "Lorem ipsum risus nam duis imperdiet consequat viverra, aliquam nostra ut lacus aliquet consectetur, porta vitae fringilla euismod tempus lacus."
-        ),
-
-    );
-
     include("./includes/head.php");
-    include("./includes/tela_carregamento.php");
 ?>
     <section class="carroussel-banner">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
@@ -229,30 +146,7 @@
             </div>
         </div>
     </section>
-    <!---Sintomas e Doenças--->
-    <section class="sintomas-fundo p-5">
-        <article class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-12 animacao animate-slide-in-left" data-animation-type="left">
-                    <div class="my-4 sintomas-texto">
-                        <h1>Você sofre de alguns desses sintomas ou doenças?</h1>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-auto sintomas-texto animacao animate-slide-in-right" data-animation-type="right">
-                    <ul id="doencas" class="p-0">
-                        <?php foreach($doencas as $doenca): ?>
-                            <li class="card_depoimento rounded shadow p-3 m-3 text-center position-relative">
-                                <h2>
-                                    <?=$doenca["doenca"]?>
-                                </h2>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <div id="dots_container_doencas"></div>
-                </div>
-            </div>
-        </article>
-    </section>
+    
     <!--Beneficios-->
     <section class="">
         <div class="container">
@@ -357,39 +251,7 @@
             </div>
         </div>
     </section>
-    <?php 
-        if(count($perguntas_frequrntes) > 0) {
-    ?>
-        <section class="section-perguntas py-5">
-            <article class="container">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                    <h1 class="wow">Principais dúvidas</h1>
-                </div>
-                <ul class="p-0">
-                    <?php
-                        foreach($perguntas_frequrntes as $key=>$pergunta_frequrnte){
-                    ?>
-                        <li class="w-100 services rounded shadow mb-4" data-anime="button">
-                            <a class="w-100 fw600 text-decoration-none p-3 d-flex align-items-center collapsed abre_fqa" type="button" data-toggle="collapse" data-target="#fqa_<?=$key + 1?>" aria-expanded="false">
-                                <?=$key + 1?>. <?=$pergunta_frequrnte["pergunta"]?>
-                                <i class="fa-solid fa-angle-down fa-fw fa-xl seta-perguntas ml-auto"></i>
-                            </a>
-                            <div id="fqa_<?=$key + 1?>" class="border_top collapse">
-                                <p class="p-3">
-                                    <?=$pergunta_frequrnte["resposta"]?>
-                                </p>
-                            </div>
-                        </li>
-                    <?php }; ?>
-                </ul>
-                <div class="text-lg-center text-md-center text-sm-center text-center my-2">
-                    <a href="<?=$url?>/obrigado-whatsapp" target="_blank" class="btn btn-success text-decoration-none text-white">
-                        <i class="fab fa-whatsapp mx-2"></i>Chamar no whatsapp
-                    </a>
-                </div>
-            </article>
-        </section>
-    <?php }; ?>
+    
 
 <?php
     include("./includes/footer.php");
